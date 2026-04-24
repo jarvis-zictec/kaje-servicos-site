@@ -48,16 +48,17 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(16px);
-      background: rgba(13,13,15,0.96);
-      border-bottom: 1px solid rgba(201,150,74,0.22);
+      background: rgba(10,18,34,0.9);
+      border-bottom: 1px solid rgba(201,150,74,0.18);
+      box-shadow: 0 10px 30px rgba(10,18,34,0.14);
     }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 78px;
-      gap: 16px;
+      min-height: 88px;
+      gap: 22px;
     }
 
     .brand {
@@ -71,11 +72,11 @@
 
     .brand-logo-image {
       display: block;
-      width: 132px;
+      width: 136px;
       max-width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
     }
 
     .sr-only {
@@ -92,13 +93,39 @@
 
     .nav-links {
       display: flex;
-      gap: 22px;
-      color: rgba(255,248,235,0.82);
-      font-weight: 500;
+      align-items: center;
+      gap: 28px;
+      color: rgba(255,248,235,0.88);
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 6px 0;
+      transition: color .2s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(201,150,74,0.82);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform .2s ease;
     }
 
     .nav-links a:hover {
-      color: #e6c98f;
+      color: #fff;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
     }
 
     .btn {
@@ -107,8 +134,9 @@
       justify-content: center;
       gap: 10px;
       border-radius: 999px;
-      padding: 14px 22px;
-      font-weight: 600;
+      padding: 15px 24px;
+      font-weight: 700;
+      font-size: 16px;
       transition: .2s ease;
       border: 1px solid transparent;
       cursor: pointer;
@@ -123,20 +151,20 @@
     .btn-primary:hover { background: var(--primary-dark); }
 
     .btn-secondary {
-      border-color: var(--line);
-      background: rgba(255,255,255,0.75);
+      border-color: rgba(17,43,87,0.12);
+      background: rgba(255,255,255,0.92);
       color: var(--text);
     }
 
     .hero {
-      padding: 72px 0 34px;
+      padding: 84px 0 42px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.95fr;
-      gap: 36px;
-      align-items: center;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 34px;
+      align-items: start;
     }
 
     .eyebrow {
@@ -160,8 +188,8 @@
     }
 
     .hero p {
-      font-size: 21px;
-      line-height: 1.4;
+      font-size: 22px;
+      line-height: 1.48;
       color: var(--muted);
       margin: 0 0 28px;
       max-width: 700px;
@@ -171,15 +199,14 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .hero-notes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      color: var(--muted);
-      font-weight: 600;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
     }
 
     .hero-card,
@@ -191,9 +218,10 @@
     }
 
     .hero-card {
-      padding: 28px;
+      padding: 32px;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,234,209,0.72));
     }
 
     .hero-card::before {
@@ -202,8 +230,37 @@
       inset: -120px auto auto -120px;
       width: 240px;
       height: 240px;
-      background: radial-gradient(circle, rgba(83,58,253,0.22), transparent 65%);
+      background: radial-gradient(circle, rgba(201,150,74,0.22), transparent 65%);
       pointer-events: none;
+    }
+
+    .hero-summary {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-note-item {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(17,43,87,0.08);
+      color: var(--text);
+      box-shadow: 0 10px 24px rgba(17,43,87,0.06);
+    }
+
+    .hero-note-item strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .hero-note-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.5;
     }
 
     .label {
@@ -215,7 +272,7 @@
     }
 
     .big-number {
-      font-size: 40px;
+      font-size: 38px;
       font-weight: 700;
       letter-spacing: -0.04em;
       margin: 12px 0 4px;
@@ -234,13 +291,13 @@
     }
 
     .metric-grid {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 22px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 10px;
     }
 
     .metric {
-      background: var(--surface-2);
-      border: 1px solid rgba(185,185,249,0.25);
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(17,43,87,0.08);
       border-radius: 18px;
       padding: 16px;
     }
@@ -267,14 +324,15 @@
     .section-sub {
       max-width: 700px;
       color: var(--muted);
-      font-size: 18px;
+      font-size: 19px;
+      line-height: 1.5;
     }
 
     .services {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .card { padding: 24px; }
+    .card { padding: 26px; }
 
     .service-icon {
       width: 52px;
@@ -364,8 +422,8 @@
     }
 
     .quote {
-      font-size: 18px;
-      line-height: 1.45;
+      font-size: 18.5px;
+      line-height: 1.55;
       color: var(--muted);
       margin-bottom: 14px;
     }
@@ -375,15 +433,28 @@
     }
 
     .cta {
-      padding: 28px;
+      padding: 34px;
       display: grid;
       grid-template-columns: 1.2fr auto;
-      gap: 18px;
+      gap: 22px;
       align-items: center;
-      background: linear-gradient(135deg, rgba(201,150,74,0.12), rgba(17,43,87,0.04));
-      border: 1px solid rgba(185,185,249,0.35);
+      background: linear-gradient(135deg, rgba(17,43,87,0.96), rgba(32,35,101,0.92));
+      color: #fff;
+      border: 1px solid rgba(201,150,74,0.25);
       border-radius: 28px;
       box-shadow: var(--shadow);
+    }
+
+    .cta .label,
+    .cta .section-sub,
+    .cta .info-chip {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .cta .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.22);
+      color: #fff;
     }
 
     .founder-quote {
@@ -414,18 +485,28 @@
       padding: 18px 0 56px;
     }
 
+    .footer-shell {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(17,43,87,0.08);
+      box-shadow: var(--shadow);
+    }
+
     .footer-grid {
-      grid-template-columns: 1.2fr 1fr 1fr;
+      grid-template-columns: 1.3fr 1fr 1fr;
       color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     .info-chip {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(255,193,7,0.14);
-      color: #8a6300;
-      font-size: 13px;
+      background: rgba(255,255,255,0.12);
+      color: var(--text);
+      font-size: 14px;
       font-weight: 700;
       margin-top: 12px;
     }
@@ -446,6 +527,7 @@
       .nav-links { display: none; }
       .section-head { align-items: start; flex-direction: column; }
       .hero { padding-top: 42px; }
+      .hero-notes { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -470,63 +552,64 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Empresa familiar • Timbó/SC • Atendimento nacional</span>
-          <h1>Atendimento humano, estrutura familiar e soluções administrativas para clientes de Timbó e de todo o Brasil.</h1>
+          <h1>Serviços administrativos com atendimento humano, clareza comercial e suporte para clientes de Timbó e de todo o Brasil.</h1>
           <p>
-            A <strong>KAJE Administração e Serviços</strong> é uma empresa familiar fundada por Kerly, com sede em Timbó/SC e atendimento para todo o Brasil, unindo proximidade, organização e suporte consultivo para clientes que precisam de segurança no dia a dia.
+            A <strong>KAJE Administração e Serviços</strong> atende MEIs, profissionais e pequenas empresas com uma operação próxima, organizada e consultiva — combinando atendimento online para todo o país com agenda presencial em Timbó/SC.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contato">Chamar no WhatsApp</a>
-            <a class="btn btn-secondary" href="#servicos">Conheça os serviços</a>
+            <a class="btn btn-primary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="#servicos">Ver serviços</a>
           </div>
-          <div style="display:flex; flex-wrap:wrap; gap:10px; margin: 0 0 18px;">
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin: 0 0 8px;">
             <span class="eyebrow" style="background:rgba(201,150,74,0.12); color:#8b632d;">KAJE Administração e Serviços</span>
             <span class="eyebrow" style="background:rgba(17,43,87,0.08); color:#112b57;">CNPJ 60.405.684/0001-33</span>
             <span class="eyebrow" style="background:rgba(88,167,124,0.12); color:#295a44;">Timbó/SC • Brasil todo</span>
           </div>
           <div class="hero-notes">
-            <span>✔ Atendimento consultivo</span>
-            <span>✔ Comunicação simples</span>
-            <span>✔ Atendimento online para todo o Brasil</span>
+            <div class="hero-note-item">
+              <strong>Atendimento direto</strong>
+              <span>Contato simples por WhatsApp e email, sem excesso de burocracia.</span>
+            </div>
+            <div class="hero-note-item">
+              <strong>Formato flexível</strong>
+              <span>Atuação online em todo o Brasil e presencial com agendamento em Timbó/SC.</span>
+            </div>
+            <div class="hero-note-item">
+              <strong>Foco prático</strong>
+              <span>Apoio administrativo e consultivo para demandas do dia a dia com mais organização.</span>
+            </div>
           </div>
         </div>
 
         <aside class="hero-card">
-          <div class="label">Atendimento online e presencial com agendamento</div>
-          <div class="big-number">KAJE Administração e Serviços</div>
-          <div class="muted">Empresa familiar com atendimento online para todo o Brasil e presencial com agendamento em Timbó/SC.</div>
+          <div class="hero-summary">
+            <div class="label">Atendimento claro, próximo e profissional</div>
+            <div class="big-number">Uma estrutura familiar com presença institucional.</div>
+            <div class="muted">A KAJE organiza o atendimento para que o cliente entenda rapidamente o que pode resolver, como iniciar e qual canal usar.</div>
 
-          <div class="metric-grid">
-            <div class="metric">
-              <strong>Nome empresarial</strong>
-              <div class="muted">KAJE Administração e Serviços • CNPJ 60.405.684/0001-33</div>
+            <div class="metric-grid">
+              <div class="metric">
+                <strong>Modelo de atendimento</strong>
+                <div class="muted">Online para todo o Brasil e presencial com agendamento em Timbó/SC.</div>
+              </div>
+              <div class="metric">
+                <strong>Perfil de cliente</strong>
+                <div class="muted">MEIs, profissionais autônomos e pequenas empresas que precisam de mais clareza operacional.</div>
+              </div>
+              <div class="metric">
+                <strong>Especialidade</strong>
+                <div class="muted">Rotina administrativa, apoio ao MEI e atendimento consultivo com linguagem simples.</div>
+              </div>
+              <div class="metric">
+                <strong>Contato principal</strong>
+                <div class="muted">WhatsApp (47) 98809-0296 • kerly@zictec.com.br</div>
+              </div>
             </div>
-            <div class="metric">
-              <strong>Modelo de atendimento</strong>
-              <div class="muted">Online para todo o Brasil e presencial com agendamento em Timbó/SC.</div>
-            </div>
-            <div class="metric">
-              <strong>Especialidade</strong>
-              <div class="muted">Rotina administrativa, apoio ao MEI e atendimento consultivo com linguagem simples.</div>
-            </div>
-          </div>
-          <div style="margin-top:18px; overflow:hidden; border-radius:18px; border:1px solid rgba(201,150,74,0.35); background:#112b57;">
-            <img src="assets/kerly-email-attachment.png" alt="Arte institucional da KAJE" style="display:block; width:100%; height:auto;">
-          </div>
-        <div class="metric-grid">
-          <div class="metric">
-            <strong>Origem</strong>
-            <div class="muted">Empresa familiar fundada por Kerly.</div>
-          </div>
-          <div class="metric">
-            <strong>Sede</strong>
-            <div class="muted">Rua Atalanta, 75 • Timbó/SC.</div>
-          </div>
-          <div class="metric">
-            <strong>Atendimento</strong>
-            <div class="muted">Presencial com agendamento e maioria dos atendimentos online para todo o Brasil.</div>
-          </div>
-        </div>
 
+            <div style="overflow:hidden; border-radius:18px; border:1px solid rgba(201,150,74,0.35); background:#112b57;">
+              <img src="assets/kerly-email-attachment.png" alt="Arte institucional da KAJE" style="display:block; width:100%; height:auto;">
+            </div>
+          </div>
         </aside>
       </div>
     </section>
@@ -694,28 +777,28 @@ A KAJE combina atendimento próximo com postura profissional, ajudando empresas 
         <div class="section-head">
           <div>
             <div class="label">Confiança e proximidade</div>
-            <h2>Confiança, agilidade e atendimento com proximidade</h2>
+            <h2>Um atendimento pensado para transmitir clareza e segurança</h2>
           </div>
           <div class="section-sub">
-            A proposta da marca é unir presença humana, organização e apoio prático para quem precisa resolver demandas administrativas com mais segurança.
+            A KAJE valoriza uma comunicação próxima, objetiva e acolhedora, para que cada pessoa entenda com facilidade como funciona o atendimento e em quais situações pode contar com esse apoio.
           </div>
         </div>
 
         <div class="proof">
           <article class="card">
-            <div class="quote">Atendimento claro e acompanhamento próximo para que o cliente saiba o que precisa fazer, em que prazo e com qual prioridade.</div>
-            <strong>Comunicação simples</strong>
-            <div class="muted">Sem excesso de burocracia na explicação</div>
+            <div class="quote">Base física em Timbó/SC, atendimento online para todo o Brasil e possibilidade de agenda presencial quando a demanda pedir contato local.</div>
+            <strong>Atuação local e nacional</strong>
+            <div class="muted">Presença regional com alcance remoto</div>
           </article>
           <article class="card">
-            <div class="quote">Estrutura familiar com postura profissional, criada para transmitir confiança desde o primeiro contato até a entrega do serviço.</div>
-            <strong>Presença institucional</strong>
-            <div class="muted">Imagem séria, acolhedora e organizada</div>
+            <div class="quote">Contato direto por WhatsApp e email para facilitar orçamento, alinhamento da demanda e acompanhamento durante o atendimento.</div>
+            <strong>Canais simples de contato</strong>
+            <div class="muted">Comunicação mais clara desde o primeiro passo</div>
           </article>
           <article class="card">
-            <div class="quote">Atuação a partir de Timbó/SC com atendimento online para todo o Brasil e agenda presencial quando a necessidade pedir contato local.</div>
-            <strong>Atendimento flexível</strong>
-            <div class="muted">Online e presencial com agendamento</div>
+            <div class="quote">Atendimento focado em MEIs, profissionais autônomos e pequenas empresas que precisam de apoio administrativo e consultivo com mais organização.</div>
+            <strong>Escopo de atuação claro</strong>
+            <div class="muted">Perfil de cliente e proposta de valor bem definidos</div>
           </article>
         </div>
       </div>
@@ -765,9 +848,9 @@ A KAJE combina atendimento próximo com postura profissional, ajudando empresas 
         <div class="cta">
           <div>
             <div class="label">Fale com a KAJE</div>
-            <h2 style="margin:8px 0 12px;">Fale com a KAJE e solicite seu atendimento.</h2>
-            <div class="section-sub" style="margin:0;">
-              Atendimento com base em Timbó/SC, estrutura familiar, suporte nacional e comunicação direta para clientes que buscam orientação, organização e acompanhamento com mais segurança.
+            <h2 style="margin:8px 0 12px; color:#fff;">Solicite seu atendimento com uma conversa direta e objetiva.</h2>
+            <div class="section-sub" style="margin:0; max-width:600px;">
+              A KAJE atende com base em Timbó/SC, operação nacional e suporte consultivo para quem precisa organizar demandas administrativas com mais segurança e clareza.
             </div>
             <span class="info-chip">Rua Atalanta, 75 • Timbó/SC • presencial com agendamento • atendimento online para todo o Brasil</span>
           </div>
@@ -781,21 +864,26 @@ A KAJE combina atendimento próximo com postura profissional, ajudando empresas 
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom: 12px;">
-          <span class="brand-badge"><img src="assets/favicon-kaje.png" alt="Ícone da KAJE"></span>
-          <img class="brand-logo-image" src="assets/logo-kaje-top.png" alt="Logo da KAJE Administração e Serviços">
+    <div class="container footer-shell">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 12px;">
+            <span class="brand-badge"><img src="assets/favicon-kaje.png" alt="Ícone da KAJE"></span>
+            <img class="brand-logo-image" src="assets/logo-kaje-top.png" alt="Logo da KAJE Administração e Serviços">
+          </div>
+          <div>Empresa familiar com atendimento administrativo e consultivo para clientes de Timbó/SC e de todo o Brasil.</div>
+          <div style="margin-top:12px;"><strong style="color:var(--text);">CNPJ</strong><br>60.405.684/0001-33</div>
         </div>
-        <div>Empresa familiar com atendimento administrativo e consultivo para clientes de Timbó/SC e de todo o Brasil.</div>
-      </div>
-      <div>
-        <strong style="color:var(--text);">Atuação</strong>
-        <div style="margin-top:10px;">Base em Timbó/SC com atendimento online para todo o Brasil e presencial mediante agendamento.</div>
-      </div>
-      <div>
-        <strong style="color:var(--text);">Contato</strong>
-        <div style="margin-top:10px;">WhatsApp (47) 98809-0296 • kerly@zictec.com.br</div>
+        <div>
+          <strong style="color:var(--text);">Atuação</strong>
+          <div style="margin-top:10px;">Base em Timbó/SC com atendimento online para todo o Brasil e presencial mediante agendamento.</div>
+          <div style="margin-top:12px;"><strong style="color:var(--text);">Endereço</strong><br>Rua Atalanta, 75 • Timbó/SC</div>
+        </div>
+        <div>
+          <strong style="color:var(--text);">Contato</strong>
+          <div style="margin-top:10px;">WhatsApp (47) 98809-0296 • kerly@zictec.com.br</div>
+          <div style="margin-top:12px;"><strong style="color:var(--text);">Modelo</strong><br>Online para todo o Brasil • presencial com agendamento</div>
+        </div>
       </div>
     </div>
   </footer>
