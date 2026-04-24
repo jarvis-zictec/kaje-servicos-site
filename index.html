@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KAJE Administração e Serviços</title>
-  <meta name="description" content="Rascunho institucional da KAJE Administração e Serviços com identidade visual inspirada no material enviado pela Kerly e foco em atendimento nacional." />
+  <meta name="description" content="KAJE Administração e Serviços — atendimento administrativo e consultivo com base em Timbó/SC e atuação para todo o Brasil." />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-kaje.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-kaje.png" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -61,21 +63,51 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       font-weight: 700;
       letter-spacing: -0.02em;
+      min-width: 0;
     }
 
     .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--primary), #7f6bff);
-      color: #fff;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #0d0d0f;
       box-shadow: var(--shadow);
-      font-weight: 700;
+      flex: 0 0 auto;
+    }
+
+    .brand-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-logo-image {
+      display: block;
+      width: 132px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     .nav-links {
@@ -364,10 +396,34 @@
       grid-template-columns: 1.2fr auto;
       gap: 18px;
       align-items: center;
-      background: linear-gradient(135deg, rgba(83,58,253,0.08), rgba(83,58,253,0.02));
+      background: linear-gradient(135deg, rgba(201,150,74,0.12), rgba(17,43,87,0.04));
       border: 1px solid rgba(185,185,249,0.35);
       border-radius: 28px;
       box-shadow: var(--shadow);
+    }
+
+    .founder-quote {
+      margin-top: 22px;
+      padding: 22px 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(201,150,74,0.10), rgba(255,250,241,0.85));
+      border: 1px solid rgba(201,150,74,0.28);
+      color: var(--text);
+      box-shadow: var(--shadow);
+    }
+
+    .founder-quote p {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .founder-quote small {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-weight: 600;
     }
 
     footer {
@@ -412,9 +468,9 @@
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="#top">
-        <span class="brand-badge">KJ</span>
-        <span>KAJE Administração e Serviços</span>
+      <a class="brand" href="#top" aria-label="KAJE Administração e Serviços">
+        <span class="brand-badge"><img src="assets/favicon-kaje.png" alt="Ícone da KAJE"></span>
+        <img class="brand-logo-image" src="assets/logo-kaje-top.png" alt="Logo da KAJE Administração e Serviços">
       </a>
       <nav class="nav-links">
         <a href="#servicos">Serviços</a>
@@ -669,6 +725,15 @@ A KAJE combina atendimento próximo com postura profissional, ajudando empresas 
       </div>
     </section>
 
+    <section>
+      <div class="container">
+        <div class="founder-quote">
+          <p>“Todos nós somos empreendedores. A vontade de criar coisas está no nosso DNA.”</p>
+          <small>Frase enviada pela Kerly para compor o posicionamento da marca.</small>
+        </div>
+      </div>
+    </section>
+
     <section id="contato">
       <div class="container">
         <div class="cta">
@@ -693,8 +758,8 @@ A KAJE combina atendimento próximo com postura profissional, ajudando empresas 
     <div class="container footer-grid">
       <div>
         <div class="brand" style="margin-bottom: 12px;">
-          <span class="brand-badge">KJ</span>
-          <span>KAJE Administração e Serviços</span>
+          <span class="brand-badge"><img src="assets/favicon-kaje.png" alt="Ícone da KAJE"></span>
+          <img class="brand-logo-image" src="assets/logo-kaje-top.png" alt="Logo da KAJE Administração e Serviços">
         </div>
         <div>Atendimento institucional com presença digital criada para aproximar a marca de novos clientes.</div>
       </div>
