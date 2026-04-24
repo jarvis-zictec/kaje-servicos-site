@@ -302,6 +302,59 @@
       padding: 16px;
     }
 
+    .alert-box {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(17,43,87,0.98), rgba(13,27,52,0.96));
+      border: 1px solid rgba(201,150,74,0.34);
+      box-shadow: 0 16px 34px rgba(17,43,87,0.18);
+      color: rgba(255,255,255,0.96);
+    }
+
+    .alert-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #f2d29b;
+    }
+
+    .alert-box h3 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .alert-box p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .alert-deadline {
+      font-size: 24px;
+      font-weight: 700;
+      color: #f2d29b;
+      letter-spacing: -0.02em;
+    }
+
+    .alert-note {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 15px;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.84);
+    }
+
     section {
       padding: 34px 0;
     }
@@ -606,8 +659,13 @@
               </div>
             </div>
 
-            <div style="overflow:hidden; border-radius:18px; border:1px solid rgba(201,150,74,0.35); background:#112b57;">
-              <img src="assets/kerly-email-attachment.png" alt="Arte institucional da KAJE" style="display:block; width:100%; height:auto;">
+            <div class="alert-box">
+              <div class="alert-title">⚠️ Aviso importante para MEI</div>
+              <h3>Declaração Anual do MEI (DASN-SIMEI)</h3>
+              <p>Se você é MEI, a declaração referente ao faturamento de 2025 precisa ser enviada dentro do prazo.</p>
+              <div class="alert-deadline">Envie até 31/05/2026</div>
+              <div class="alert-note">⚠️ O não envio dentro do prazo pode gerar multa e pendências no CNPJ.</div>
+              <p>Se precisar de ajuda para enviar a declaração, fale com a KAJE pelo WhatsApp <strong>(47) 98809-0296</strong>.</p>
             </div>
           </div>
         </aside>
