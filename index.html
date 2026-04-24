@@ -223,6 +223,23 @@
       margin-top: 22px;
     }
 
+    .hero-support-block {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,234,209,0.82));
+      border: 1px solid rgba(201,150,74,0.24);
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-audience {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .hero-card,
     .card {
       background: rgba(255,255,255,0.92);
@@ -232,7 +249,7 @@
     }
 
     .hero-card {
-      padding: 32px;
+      padding: 28px;
       position: relative;
       overflow: hidden;
       background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,234,209,0.72));
@@ -252,7 +269,7 @@
       position: relative;
       z-index: 1;
       display: grid;
-      gap: 18px;
+      gap: 16px;
     }
 
     .hero-note-item {
@@ -605,6 +622,7 @@
       .section-head { align-items: start; flex-direction: column; }
       .hero { padding-top: 42px; }
       .hero-notes { grid-template-columns: 1fr; }
+      .hero-audience { gap: 8px; }
     }
   </style>
 </head>
@@ -637,23 +655,25 @@
             <a class="btn btn-primary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">Falar no WhatsApp</a>
             <a class="btn btn-secondary" href="#servicos">Ver serviços</a>
           </div>
-          <div style="display:flex; flex-wrap:wrap; gap:10px; margin: 0 0 8px;">
-            <span class="eyebrow" style="background:rgba(201,150,74,0.12); color:#8b632d;">Para MEIs</span>
-            <span class="eyebrow" style="background:rgba(17,43,87,0.08); color:#112b57;">Pequenas empresas</span>
-            <span class="eyebrow" style="background:rgba(88,167,124,0.12); color:#295a44;">Profissionais autônomos</span>
-          </div>
-          <div class="hero-notes">
-            <div class="hero-note-item">
-              <strong>Atendimento sem burocracia</strong>
-              <span>Fale direto por WhatsApp ou email e entenda rapidamente o que precisa ser feito.</span>
+          <div class="hero-support-block">
+            <div class="hero-audience">
+              <span class="eyebrow" style="background:rgba(201,150,74,0.12); color:#8b632d;">Para MEIs</span>
+              <span class="eyebrow" style="background:rgba(17,43,87,0.08); color:#112b57;">Pequenas empresas</span>
+              <span class="eyebrow" style="background:rgba(88,167,124,0.12); color:#295a44;">Profissionais autônomos</span>
             </div>
-            <div class="hero-note-item">
-              <strong>Do online ao presencial</strong>
-              <span>Atendimento em todo o Brasil e encontros em Timbó/SC quando necessário.</span>
-            </div>
-            <div class="hero-note-item">
-              <strong>Mais foco na operação</strong>
-              <span>A KAJE ajuda com a parte administrativa para você ganhar tempo no dia a dia.</span>
+            <div class="hero-notes">
+              <div class="hero-note-item">
+                <strong>Atendimento sem burocracia</strong>
+                <span>Fale direto por WhatsApp ou email e entenda rapidamente o que precisa ser feito.</span>
+              </div>
+              <div class="hero-note-item">
+                <strong>Do online ao presencial</strong>
+                <span>Atendimento em todo o Brasil e encontros em Timbó/SC quando necessário.</span>
+              </div>
+              <div class="hero-note-item">
+                <strong>Mais foco na operação</strong>
+                <span>A KAJE ajuda com a parte administrativa para você ganhar tempo no dia a dia.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -669,26 +689,6 @@
               <p>Se precisar de ajuda para enviar a declaração, fale com a KAJE pelo WhatsApp.</p>
               <a class="btn btn-primary" href="https://wa.me/5547988090296?text=Ol%C3%A1%2C%20vi%20o%20aviso%20no%20site%20da%20Kaje%20e%20gostaria%20de%20ajuda%20para%20enviar%20a%20declara%C3%A7%C3%A3o%20Anual%20do%20MEI." target="_blank" rel="noopener">Entrar em contato agora</a>
             </div>
-
-            <div class="label">Para facilitar sua rotina</div>
-            <div class="big-number">Apoio administrativo para quem precisa resolver sem parar a operação.</div>
-            <div class="muted">Atendimento próximo, linguagem simples e apoio prático para tirar o peso das pendências do seu dia a dia.</div>
-
-            <div class="metric-grid">
-              <div class="metric">
-                <strong>Como a KAJE atende</strong>
-                <div class="muted">Online para todo o Brasil e presencial com agendamento em Timbó/SC.</div>
-              </div>
-              <div class="metric">
-                <strong>Para quem faz sentido</strong>
-                <div class="muted">MEIs, profissionais autônomos e pequenas empresas que precisam de ajuda com a rotina administrativa.</div>
-              </div>
-              <div class="metric">
-                <strong>O que ajuda a resolver</strong>
-                <div class="muted">Pendências administrativas, apoio ao MEI e orientações práticas para o dia a dia.</div>
-              </div>
-            </div>
-
           </div>
         </aside>
       </div>
