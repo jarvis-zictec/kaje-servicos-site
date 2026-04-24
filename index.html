@@ -219,17 +219,18 @@
     .hero-notes {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+      gap: 16px;
       margin-top: 22px;
+      align-items: stretch;
     }
 
     .hero-support-block {
       margin-top: 22px;
-      padding: 22px;
-      border-radius: 24px;
+      padding: 26px;
+      border-radius: 28px;
       background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,234,209,0.82));
       border: 1px solid rgba(201,150,74,0.24);
-      box-shadow: var(--shadow);
+      box-shadow: 0 22px 52px rgba(17,43,87,0.12);
       display: grid;
       gap: 18px;
     }
@@ -253,6 +254,7 @@
       position: relative;
       overflow: hidden;
       background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,234,209,0.72));
+      box-shadow: 0 28px 68px rgba(17,43,87,0.2);
     }
 
     .hero-card::before {
@@ -273,12 +275,13 @@
     }
 
     .hero-note-item {
-      padding: 18px 20px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.82);
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.88);
       border: 1px solid rgba(17,43,87,0.08);
       color: var(--text);
-      box-shadow: 0 10px 24px rgba(17,43,87,0.06);
+      box-shadow: 0 12px 28px rgba(17,43,87,0.07);
+      min-height: 100%;
     }
 
     .hero-note-item strong {
@@ -673,6 +676,18 @@
               <div class="hero-note-item">
                 <strong>Mais foco na operação</strong>
                 <span>A KAJE ajuda com a parte administrativa para você ganhar tempo no dia a dia.</span>
+              </div>
+              <div class="hero-note-item">
+                <strong>Atendimento para todo o Brasil</strong>
+                <span>Você resolve de forma online com praticidade e conta com presencial em Timbó/SC quando fizer sentido.</span>
+              </div>
+              <div class="hero-note-item">
+                <strong>Ideal para a sua rotina</strong>
+                <span>Faz sentido para MEIs, autônomos e pequenas empresas que precisam de apoio administrativo no dia a dia.</span>
+              </div>
+              <div class="hero-note-item">
+                <strong>Ajuda com pendências e organização</strong>
+                <span>A KAJE orienta e apoia em demandas administrativas e tributárias com linguagem simples e atendimento próximo.</span>
               </div>
             </div>
           </div>
