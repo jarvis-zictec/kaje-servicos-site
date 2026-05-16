@@ -11,7 +11,6 @@ if ( ! function_exists( 'kaje_asset' ) ) {
     }
 }
 ?>
-<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -686,7 +685,7 @@ if ( ! function_exists( 'kaje_asset' ) ) {
       }
     }
   </style>
-  <?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 <body <?php body_class( 'kaje-site' ); ?>>
 <?php wp_body_open(); ?>
@@ -698,11 +697,11 @@ if ( ! function_exists( 'kaje_asset' ) ) {
       <nav class="nav-links">
         <a href="#servicos">Serviços</a>
         <a href="#como-funciona">Como funciona</a>
+        <a href="https://loja.kajeservicos.com.br/">Loja online</a>
         <a href="#diferenciais">Diferenciais</a>
-        <a href="#contato">Contato</a>
         <a href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">Agendamento</a>
       </nav>
-      <a class="btn btn-primary" href="#contato">Pedir orçamento</a>
+      <a class="btn btn-primary" href="https://loja.kajeservicos.com.br/">Contratar online</a>
     </div>
   </header>
 
@@ -716,7 +715,8 @@ if ( ! function_exists( 'kaje_asset' ) ) {
             A <strong>KAJE Administração e Serviços</strong> apoia MEIs, profissionais e pequenas empresas que não têm tempo para cuidar da rotina administrativa ou preferem concentrar sua energia no atendimento, na produção e na operação do negócio.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a class="btn btn-primary" href="https://loja.kajeservicos.com.br/">Contratar online</a>
+            <a class="btn btn-secondary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">Falar no WhatsApp</a>
             <a class="btn btn-secondary" href="#servicos">Ver serviços</a>
           </div>
         </div>
@@ -779,7 +779,7 @@ if ( ! function_exists( 'kaje_asset' ) ) {
             <h2>Soluções práticas para MEIs, profissionais e pequenas empresas</h2>
           </div>
           <div class="section-sub">
-            Conheça os principais serviços da KAJE para MEIs, profissionais e pequenas empresas, com atendimento direto e suporte adaptado à necessidade de cada cliente.
+Conheça os principais serviços da KAJE para MEIs, profissionais e pequenas empresas. Alguns serviços já podem ser contratados diretamente pela loja online, com confirmação humana antes da execução.
           </div>
         </div>
 
@@ -883,20 +883,20 @@ if ( ! function_exists( 'kaje_asset' ) ) {
             <h2>Um processo simples, claro e direto</h2>
           </div>
           <div class="section-sub">
-            Conheça com rapidez os serviços da KAJE, os diferenciais do atendimento e os canais para falar direto com a equipe.
+Você pode iniciar pelo WhatsApp, agendar atendimento ou contratar serviços selecionados pela loja online. Em todos os casos, a KAJE confirma os dados antes de executar.
           </div>
         </div>
 
         <div class="process">
           <article class="card">
             <div class="step-num">1</div>
-            <h3>Entre em contato explicando sua demanda</h3>
-            <p class="muted">Fale com a KAJE pelo canal mais prático para você e explique o que precisa resolver, com clareza e objetividade.</p>
+            <h3>Escolha o serviço ou explique sua demanda</h3>
+            <p class="muted">Acesse a loja para contratar serviços já definidos ou fale com a KAJE pelo canal mais prático quando precisar de orientação.</p>
           </article>
           <article class="card">
             <div class="step-num">2</div>
-            <h3>Aprove o orçamento</h3>
-            <p class="muted">Após entender a necessidade, a KAJE apresenta a proposta para validação antes de iniciar o atendimento.</p>
+            <h3>Finalize a contratação ou aprove o orçamento</h3>
+            <p class="muted">Nos serviços da loja, você finaliza o pedido online. Para casos sob medida, a KAJE apresenta a proposta antes de iniciar.</p>
           </article>
           <article class="card">
             <div class="step-num">3</div>
@@ -1018,11 +1018,12 @@ A KAJE oferece atendimento ágil e prático, ajudando empresas e MEIs a buscarem
             <div class="label">Entre em contato</div>
             <h2 style="margin:8px 0 12px; color:#fff;">Escolha a forma mais prática de iniciar seu atendimento.</h2>
             <div class="section-sub" style="margin:0; max-width:600px;">
-              Fale com a KAJE pelo WhatsApp, envie sua demanda por email ou solicite um agendamento presencial em Timbó/SC, conforme a sua preferência.
+Fale com a KAJE pelo WhatsApp, envie sua demanda por email, agende uma conversa ou acesse a loja online para contratar serviços selecionados.
             </div>
           </div>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">💬 WhatsApp (47) 98809-0296</a>
+            <a class="btn btn-primary" href="https://loja.kajeservicos.com.br/">🛒 Contratar pela loja online</a>
+            <a class="btn btn-secondary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">💬 WhatsApp (47) 98809-0296</a>
             <a class="btn btn-secondary" href="mailto:kerly@kajeservicos.com.br">✉️ Email kerly@kajeservicos.com.br</a>
             <a class="btn btn-secondary" href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">📅 Agendar atendimento</a>
             <a class="info-chip" href="https://www.google.com/maps/place/ZICTEC/@-26.8253721,-49.2573255,17z/data=!3m1!4b1!4m6!3m5!1s0x94defdc764cbb95d:0xabfeec8d4ddc24fe!8m2!3d-26.8253721!4d-49.2573255!16s%2Fg%2F11fj6jsc60?entry=ttu" target="_blank" rel="noopener" aria-label="Abrir localização da KAJE no mapa" title="Abrir localização da KAJE no mapa">
@@ -1053,7 +1054,7 @@ A KAJE oferece atendimento ágil e prático, ajudando empresas e MEIs a buscarem
         <div>
           <strong class="footer-title">Contato</strong>
           <div style="margin-top:10px;">WhatsApp (47) 98809-0296 • kerly@kajeservicos.com.br</div>
-          <div style="margin-top:10px;"><a href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">Agendamento online</a></div>
+          <div style="margin-top:10px;"><a href="https://loja.kajeservicos.com.br/">Loja online</a> • <a href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">Agendamento online</a></div>
           <div style="margin-top:12px;"><strong class="footer-title">Modelo</strong><br>Online para todo o Brasil • presencial com agendamento</div>
         </div>
       </div>
