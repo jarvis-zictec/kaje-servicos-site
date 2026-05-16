@@ -700,6 +700,7 @@ if ( ! function_exists( 'kaje_asset' ) ) {
         <a href="#como-funciona">Como funciona</a>
         <a href="#diferenciais">Diferenciais</a>
         <a href="#contato">Contato</a>
+        <a href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">Agendamento</a>
       </nav>
       <a class="btn btn-primary" href="#contato">Pedir orçamento</a>
     </div>
@@ -1022,7 +1023,8 @@ A KAJE oferece atendimento ágil e prático, ajudando empresas e MEIs a buscarem
           </div>
           <div class="cta-actions">
             <a class="btn btn-primary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">💬 WhatsApp (47) 98809-0296</a>
-            <a class="btn btn-secondary" href="mailto:kerly@zictec.com.br">✉️ Email kerly@zictec.com.br</a>
+            <a class="btn btn-secondary" href="mailto:kerly@kajeservicos.com.br">✉️ Email kerly@kajeservicos.com.br</a>
+            <a class="btn btn-secondary" href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">📅 Agendar atendimento</a>
             <a class="info-chip" href="https://www.google.com/maps/place/ZICTEC/@-26.8253721,-49.2573255,17z/data=!3m1!4b1!4m6!3m5!1s0x94defdc764cbb95d:0xabfeec8d4ddc24fe!8m2!3d-26.8253721!4d-49.2573255!16s%2Fg%2F11fj6jsc60?entry=ttu" target="_blank" rel="noopener" aria-label="Abrir localização da KAJE no mapa" title="Abrir localização da KAJE no mapa">
               📍 Abrir localização no mapa
             </a>
@@ -1050,7 +1052,8 @@ A KAJE oferece atendimento ágil e prático, ajudando empresas e MEIs a buscarem
         </div>
         <div>
           <strong class="footer-title">Contato</strong>
-          <div style="margin-top:10px;">WhatsApp (47) 98809-0296 • kerly@zictec.com.br</div>
+          <div style="margin-top:10px;">WhatsApp (47) 98809-0296 • kerly@kajeservicos.com.br</div>
+          <div style="margin-top:10px;"><a href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">Agendamento online</a></div>
           <div style="margin-top:12px;"><strong class="footer-title">Modelo</strong><br>Online para todo o Brasil • presencial com agendamento</div>
         </div>
       </div>
