@@ -1,0 +1,1061 @@
+<?php
+/**
+ * KAJE Serviços — WordPress front page.
+ *
+ * Generated from the static landing page. Keep index.html usable for
+ * static preview/GitHub Pages; this PHP file adapts asset URLs for WordPress.
+ */
+if ( ! function_exists( 'kaje_asset' ) ) {
+    function kaje_asset( $path ) {
+        return esc_url( get_template_directory_uri() . '/' . ltrim( $path, '/' ) );
+    }
+}
+?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAJE Administração e Serviços</title>
+  <meta name="description" content="KAJE Administração e Serviços — atendimento administrativo e consultivo com base em Timbó/SC e atuação para todo o Brasil." />
+  <link rel="icon" type="image/png" sizes="128x128" href="<?php echo kaje_asset( 'assets/favicon-kaje.png' ); ?>" />
+  <link rel="apple-touch-icon" href="<?php echo kaje_asset( 'assets/favicon-kaje.png' ); ?>" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4efe4;
+      --surface: #fffaf1;
+      --surface-2: #f6ead1;
+      --text: #132949;
+      --muted: #5f6470;
+      --primary: #c9964a;
+      --primary-dark: #b78439;
+      --line: #e7d2aa;
+      --dark: #112b57;
+      --success: #58a77c;
+      --shadow: rgba(17, 43, 87, 0.22) 0px 22px 40px -24px, rgba(65, 39, 5, 0.12) 0px 14px 28px -20px;
+      --radius: 14px;
+      --container: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(83,58,253,0.12), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(0,0,0,0.94);
+      border-bottom: 1px solid rgba(201,150,74,0.18);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.24);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 88px;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      min-width: 0;
+    }
+
+    header .brand {
+      width: 248px;
+      flex: 0 0 248px;
+      overflow: hidden;
+    }
+
+    .brand-logo-image {
+      display: block;
+      width: 228px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+
+    header .brand-logo-image {
+      width: 332px;
+      max-width: none;
+      margin: -2px -5px -2px -2px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: rgba(255,248,235,0.88);
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 6px 0;
+      transition: color .2s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(201,150,74,0.82);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 15px 24px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: .2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-secondary {
+      border-color: rgba(17,43,87,0.12);
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 84px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(83,58,253,0.08);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 22px;
+      line-height: 1.48;
+      color: var(--muted);
+      margin: 0 0 28px;
+      max-width: 700px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .hero-notes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+      align-items: stretch;
+    }
+
+    .hero-support-block {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: -4px;
+      padding: 26px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,234,209,0.82));
+      border: 1px solid rgba(201,150,74,0.24);
+      box-shadow: 0 22px 52px rgba(17,43,87,0.12);
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-audience {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-card,
+    .card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(223,232,243,0.95);
+      box-shadow: var(--shadow);
+      border-radius: 24px;
+    }
+
+    .hero-card {
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,234,209,0.72));
+      box-shadow: 0 28px 68px rgba(17,43,87,0.2);
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: -120px auto auto -120px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(201,150,74,0.22), transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-summary {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero-note-item {
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(17,43,87,0.08);
+      color: var(--text);
+      box-shadow: 0 12px 28px rgba(17,43,87,0.07);
+      min-height: 100%;
+    }
+
+    .hero-note-item strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .hero-note-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.5;
+    }
+
+    .label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .big-number {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      margin: 12px 0 4px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .metric-grid,
+    .services,
+    .benefits,
+    .proof,
+    .faq,
+    .footer-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .metric-grid {
+      grid-template-columns: 1fr;
+      margin-top: 8px;
+      gap: 14px;
+    }
+
+    .metric {
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(17,43,87,0.08);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .alert-box {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(17,43,87,0.98), rgba(13,27,52,0.96));
+      border: 1px solid rgba(201,150,74,0.34);
+      box-shadow: 0 16px 34px rgba(17,43,87,0.18);
+      color: rgba(255,255,255,0.96);
+    }
+
+    .alert-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #f2d29b;
+    }
+
+    .alert-box h3 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .alert-box p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .alert-deadline {
+      font-size: 24px;
+      font-weight: 700;
+      color: #f2d29b;
+      letter-spacing: -0.02em;
+    }
+
+    .alert-note {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 15px;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.84);
+    }
+
+    .alert-box .btn {
+      justify-self: start;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section-sub {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .services {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card { padding: 26px; }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(83,58,253,0.12), rgba(83,58,253,0.04));
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    ul.clean li::before {
+      content: '•';
+      color: var(--success);
+      margin-right: 8px;
+      font-weight: 700;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step-num {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .dark-band {
+      background: linear-gradient(135deg, #202365, #111438 70%);
+      color: #fff;
+      margin: 34px 0;
+      padding: 44px 0;
+    }
+
+    .benefits {
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+    }
+
+    .benefit-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .benefit-item {
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .highlight-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 26px;
+    }
+
+    .proof {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quote {
+      font-size: 18.5px;
+      line-height: 1.55;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .faq {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.2fr auto;
+      gap: 22px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(17,43,87,0.96), rgba(32,35,101,0.92));
+      color: #fff;
+      border: 1px solid rgba(201,150,74,0.25);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta .label,
+    .cta .section-sub {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      width: 100%;
+      max-width: 420px;
+      justify-self: end;
+    }
+
+    .cta-actions .btn,
+    .cta-actions .info-chip {
+      width: 100%;
+      min-height: 56px;
+      justify-content: center;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .cta-actions-note {
+      margin-top: 4px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.68);
+      text-align: center;
+    }
+
+    .cta .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.22);
+      color: #fff;
+    }
+
+    .founder-quote {
+      margin-top: 22px;
+      padding: 22px 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(201,150,74,0.10), rgba(255,250,241,0.85));
+      border: 1px solid rgba(201,150,74,0.28);
+      color: var(--text);
+      box-shadow: var(--shadow);
+    }
+
+    .founder-quote p {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .founder-quote small {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 18px 0 56px;
+    }
+
+    .footer-shell {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(0,0,0,0.94);
+      border: 1px solid rgba(201,150,74,0.18);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.24);
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.3fr 1fr 1fr;
+      color: rgba(255,255,255,0.78);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-title {
+      color: #f7ead0;
+      font-weight: 700;
+    }
+
+    .info-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: .2s ease;
+    }
+
+    .info-chip:hover,
+    .info-chip:focus-visible {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.18);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .benefits,
+      .cta,
+      .footer-grid,
+      .services,
+      .proof,
+      .faq,
+      .process,
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links { display: none; }
+      .section-head { align-items: start; flex-direction: column; }
+      .hero { padding-top: 42px; }
+      .hero-notes { grid-template-columns: 1fr; }
+      .hero-audience { gap: 8px; }
+      .cta-actions {
+        max-width: none;
+        justify-self: stretch;
+        align-items: stretch;
+      }
+    }
+  </style>
+  <?php wp_head(); ?>
+</head>
+<body <?php body_class( 'kaje-site' ); ?>>
+<?php wp_body_open(); ?>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="KAJE Administração e Serviços">
+        <img class="brand-logo-image" src="<?php echo kaje_asset( 'assets/logo-kaje-header-horizontal.png' ); ?>" alt="Logo da KAJE Administração e Serviços">
+      </a>
+      <nav class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn-primary" href="#contato">Pedir orçamento</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Empresa familiar • Timbó/SC • Atendimento nacional</span>
+          <h1>A KAJE ajuda você a organizar a parte administrativa enquanto você foca no que faz a empresa acontecer.</h1>
+          <p>
+            A <strong>KAJE Administração e Serviços</strong> apoia MEIs, profissionais e pequenas empresas que não têm tempo para cuidar da rotina administrativa ou preferem concentrar sua energia no atendimento, na produção e na operação do negócio.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="#servicos">Ver serviços</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="hero-summary">
+            <div class="alert-box">
+              <div class="alert-title">⚠️ Aviso importante para MEI</div>
+              <h3>Declaração Anual do MEI (DASN-SIMEI)</h3>
+              <p>Se você é MEI, a declaração referente ao faturamento de 2025 precisa ser enviada dentro do prazo.</p>
+              <div class="alert-deadline">Envie até 31/05/2026</div>
+              <div class="alert-note">⚠️ O não envio dentro do prazo pode gerar multa e pendências no CNPJ.</div>
+              <p>Se precisar de ajuda para enviar a declaração, fale com a KAJE pelo WhatsApp.</p>
+              <a class="btn btn-primary" href="https://wa.me/5547988090296?text=Ol%C3%A1%2C%20vi%20o%20aviso%20no%20site%20da%20Kaje%20e%20gostaria%20de%20ajuda%20para%20enviar%20a%20declara%C3%A7%C3%A3o%20Anual%20do%20MEI." target="_blank" rel="noopener">Entrar em contato agora</a>
+            </div>
+          </div>
+        </aside>
+
+        <div class="hero-support-block">
+          <div class="hero-audience">
+            <span class="eyebrow" style="background:rgba(201,150,74,0.12); color:#8b632d;">Para MEIs</span>
+            <span class="eyebrow" style="background:rgba(17,43,87,0.08); color:#112b57;">Pequenas empresas</span>
+            <span class="eyebrow" style="background:rgba(88,167,124,0.12); color:#295a44;">Profissionais autônomos</span>
+          </div>
+          <div class="hero-notes">
+            <div class="hero-note-item">
+              <strong>Atendimento sem burocracia</strong>
+              <span>Fale direto por WhatsApp ou email e entenda rapidamente o que precisa ser feito.</span>
+            </div>
+            <div class="hero-note-item">
+              <strong>Do online ao presencial</strong>
+              <span>Atendimento em todo o Brasil e encontros em Timbó/SC quando necessário.</span>
+            </div>
+            <div class="hero-note-item">
+              <strong>Mais foco na operação</strong>
+              <span>A KAJE ajuda com a parte administrativa para você ganhar tempo no dia a dia.</span>
+            </div>
+            <div class="hero-note-item">
+              <strong>Atendimento para todo o Brasil</strong>
+              <span>Você resolve de forma online com praticidade e conta com presencial em Timbó/SC quando fizer sentido.</span>
+            </div>
+            <div class="hero-note-item">
+              <strong>Ideal para a sua rotina</strong>
+              <span>Faz sentido para MEIs, autônomos e pequenas empresas que precisam de apoio administrativo no dia a dia.</span>
+            </div>
+            <div class="hero-note-item">
+              <strong>Ajuda com pendências e organização</strong>
+              <span>A KAJE orienta e apoia em demandas administrativas e tributárias com linguagem simples e atendimento próximo.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Nossos serviços</div>
+            <h2>Soluções práticas para MEIs, profissionais e pequenas empresas</h2>
+          </div>
+          <div class="section-sub">
+            Conheça os principais serviços da KAJE para MEIs, profissionais e pequenas empresas, com atendimento direto e suporte adaptado à necessidade de cada cliente.
+          </div>
+        </div>
+
+        <div class="services">
+          <article class="card">
+            <div class="service-icon">01</div>
+            <h3>Abertura e formalização de MEI</h3>
+            <p class="muted">Para quem quer começar do jeito certo, com apoio no processo de formalização e orientação clara sobre os primeiros passos do negócio.</p>
+            <ul class="clean">
+              <li>Apoio na abertura do MEI</li>
+              <li>Orientação sobre enquadramento e documentação</li>
+              <li>Explicação simples para iniciar com mais segurança</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">02</div>
+            <h3>Regularização e atualização cadastral</h3>
+            <p class="muted">Atendimento para ajustar pendências, atualizar dados e colocar tudo em ordem com menos burocracia.</p>
+            <ul class="clean">
+              <li>Orientação sobre pendências do MEI</li>
+              <li>Apoio em alteração de dados cadastrais</li>
+              <li>Encaminhamento para regularização com acompanhamento próximo</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">03</div>
+            <h3>Declaração anual e obrigações do MEI</h3>
+            <p class="muted">Suporte para manter a empresa em dia, entender prazos e evitar erros que geram atraso, multa ou insegurança na rotina do empreendedor.</p>
+            <ul class="clean">
+              <li>Declaração anual do MEI (DASN-SIMEI)</li>
+              <li>Orientação sobre prazos e obrigações recorrentes</li>
+              <li>Acompanhamento com linguagem simples e direta</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">04</div>
+            <h3>Emissão de notas e apoio operacional</h3>
+            <p class="muted">Apoio para quem precisa entender processos, organizar a operação e ganhar mais clareza no dia a dia administrativo do negócio.</p>
+            <ul class="clean">
+              <li>Orientação sobre emissão de notas e rotinas relacionadas</li>
+              <li>Suporte em processos administrativos e organização</li>
+              <li>Mais agilidade para a rotina operacional</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">05</div>
+            <h3>Suporte administrativo para empresas e profissionais</h3>
+            <p class="muted">Apoio para reduzir sobrecarga, melhorar a organização e resolver tarefas que acabam travando a rotina de trabalho.</p>
+            <ul class="clean">
+              <li>Organização de rotinas administrativas</li>
+              <li>Acompanhamento próximo e resposta rápida</li>
+              <li>Atendimento humano com foco em clareza e execução</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">06</div>
+            <h3>Regularização e parcelamento de dívida tributária</h3>
+            <p class="muted">Atendimento para quem precisa entender débitos, organizar pendências tributárias e buscar formas de regularização.</p>
+            <ul class="clean">
+              <li>Orientação sobre débitos e pendências tributárias</li>
+              <li>Apoio na análise de possibilidades de parcelamento</li>
+              <li>Acompanhamento com linguagem simples e foco em solução</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">07</div>
+            <h3>Consultoria e atendimento sob medida</h3>
+            <p class="muted">Quando o caso pede mais atenção, a KAJE oferece atendimento personalizado, online ou presencial com agendamento.</p>
+            <ul class="clean">
+              <li>Soluções alinhadas à realidade de cada cliente</li>
+              <li>Atendimento online para todo o Brasil</li>
+              <li>Presencial com agendamento em Timbó/SC</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="service-icon">08</div>
+            <h3>Cadastro ANTT</h3>
+            <p class="muted">Apoio para organizar o cadastro na ANTT com mais clareza e menos retrabalho.</p>
+            <ul class="clean">
+              <li>Orientação sobre documentos e dados necessários</li>
+              <li>Acompanhamento do processo cadastral</li>
+              <li>Atendimento direto para tirar dúvidas</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Como contratar</div>
+            <h2>Um processo simples, claro e direto</h2>
+          </div>
+          <div class="section-sub">
+            Conheça com rapidez os serviços da KAJE, os diferenciais do atendimento e os canais para falar direto com a equipe.
+          </div>
+        </div>
+
+        <div class="process">
+          <article class="card">
+            <div class="step-num">1</div>
+            <h3>Entre em contato explicando sua demanda</h3>
+            <p class="muted">Fale com a KAJE pelo canal mais prático para você e explique o que precisa resolver, com clareza e objetividade.</p>
+          </article>
+          <article class="card">
+            <div class="step-num">2</div>
+            <h3>Aprove o orçamento</h3>
+            <p class="muted">Após entender a necessidade, a KAJE apresenta a proposta para validação antes de iniciar o atendimento.</p>
+          </article>
+          <article class="card">
+            <div class="step-num">3</div>
+            <h3>Resolva sua demanda pontual</h3>
+            <p class="muted">Com a aprovação, o serviço segue para execução com foco em resolver a sua necessidade de forma prática e segura.</p>
+          </article>
+          <article class="card">
+            <div class="step-num">4</div>
+            <h3>Acompanhamento mensal opcional</h3>
+            <p class="muted">Se fizer sentido para a sua rotina, a KAJE também pode seguir com suporte recorrente e acompanhamento contínuo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band" id="diferenciais">
+      <div class="container benefits">
+        <div>
+          <div class="label" style="color:#b9b9f9;">Diferenciais</div>
+          <h2 style="color:#fff; margin-top:10px;">Resolva sua demanda com rapidez e transparência.</h2>
+          <p class="section-sub" style="color:rgba(255,255,255,0.72); max-width: 560px;">
+A KAJE oferece atendimento ágil e prático, ajudando empresas e MEIs a buscarem soluções eficientes para resolver pendências administrativas e tributárias.
+          </p>
+          <div class="benefit-list">
+            <div class="benefit-item"><strong>Atendimento próximo</strong><br><span style="color:rgba(255,255,255,0.72);">Contato direto, linguagem simples e acompanhamento próximo em cada etapa do atendimento.</span></div>
+            <div class="benefit-item"><strong>Atendimento em todo o Brasil</strong><br><span style="color:rgba(255,255,255,0.72);">Base em Timbó/SC com atendimento online para clientes de diferentes regiões do país.</span></div>
+            <div class="benefit-item"><strong>Atendimento profissional</strong><br><span style="color:rgba(255,255,255,0.72);">Comunicação objetiva, organização e seriedade desde o primeiro contato.</span></div>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <div class="label" style="color:#b9b9f9;">Atendimento e benefícios</div>
+          <ul class="clean" style="color:rgba(255,255,255,0.78); margin-top:14px;">
+            <li>Atendimento online para todo o Brasil</li>
+            <li>Presencial com agendamento em Timbó/SC</li>
+            <li>Suporte administrativo e consultivo</li>
+            <li>Apoio ao MEI com linguagem acessível</li>
+            <li>Contato direto por WhatsApp e email</li>
+            <li>Atendimento personalizado conforme a necessidade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section hidden data-temporarily-hidden="true" aria-hidden="true">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Confiança e proximidade</div>
+            <h2>Um atendimento claro, próximo e seguro</h2>
+          </div>
+          <div class="section-sub">
+            A KAJE valoriza uma comunicação próxima, objetiva e acolhedora, ajudando cada pessoa a entender com tranquilidade como o atendimento funciona e quando esse apoio pode fazer sentido.
+          </div>
+        </div>
+
+        <div class="proof">
+          <article class="card">
+            <div class="quote">Base em Timbó/SC, atendimento online para todo o Brasil e possibilidade de encontro presencial quando necessário.</div>
+            <strong>Atuação local e nacional</strong>
+            <div class="muted">Presença regional com alcance remoto</div>
+          </article>
+          <article class="card">
+            <div class="quote">Contato direto por WhatsApp e email para pedir orçamento, tirar dúvidas e acompanhar o atendimento com mais facilidade.</div>
+            <strong>Canais simples de contato</strong>
+            <div class="muted">Comunicação mais clara desde o primeiro passo</div>
+          </article>
+          <article class="card">
+            <div class="quote">Atendimento voltado a MEIs, profissionais autônomos e pequenas empresas que precisam de ajuda com tarefas administrativas.</div>
+            <strong>Atendimento para a rotina real</strong>
+            <div class="muted">Soluções para o dia a dia de quem precisa manter tudo em ordem</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Dúvidas frequentes</div>
+            <h2>Perguntas frequentes</h2>
+          </div>
+          <div class="section-sub">Dúvidas comuns sobre atendimento, orçamento e formato de trabalho da KAJE.</div>
+        </div>
+        <div class="faq">
+          <article class="card">
+            <h3>Quais regiões a KAJE atende?</h3>
+            <p class="muted">A empresa tem base em Timbó/SC e atende o Brasil todo, com encontros presenciais por agendamento e atendimento principalmente online.</p>
+          </article>
+          <article class="card">
+            <h3>Como solicitar orçamento?</h3>
+            <p class="muted">A ação principal segue sendo contato direto para atendimento e orçamento, com destaque para WhatsApp e email.</p>
+          </article>
+          <article class="card">
+            <h3>Quais serviços entram no atendimento?</h3>
+            <p class="muted">A KAJE atua com apoio administrativo, atendimento ao MEI e orientação para quem precisa organizar melhor a rotina do negócio.</p>
+          </article>
+          <article class="card">
+            <h3>É possível atendimento personalizado?</h3>
+            <p class="muted">Sim. O atendimento pode ser adaptado à necessidade do cliente, com suporte online e presencial mediante agendamento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="founder-quote">
+          <p>“Todos nós somos empreendedores. A vontade de criar coisas está no nosso DNA.”</p>
+          <small>Frase de inspiração para quem empreende</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <div class="label">Entre em contato</div>
+            <h2 style="margin:8px 0 12px; color:#fff;">Escolha a forma mais prática de iniciar seu atendimento.</h2>
+            <div class="section-sub" style="margin:0; max-width:600px;">
+              Fale com a KAJE pelo WhatsApp, envie sua demanda por email ou solicite um agendamento presencial em Timbó/SC, conforme a sua preferência.
+            </div>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/5547988090296" target="_blank" rel="noopener">💬 WhatsApp (47) 98809-0296</a>
+            <a class="btn btn-secondary" href="mailto:kerly@zictec.com.br">✉️ Email kerly@zictec.com.br</a>
+            <a class="info-chip" href="https://www.google.com/maps/place/ZICTEC/@-26.8253721,-49.2573255,17z/data=!3m1!4b1!4m6!3m5!1s0x94defdc764cbb95d:0xabfeec8d4ddc24fe!8m2!3d-26.8253721!4d-49.2573255!16s%2Fg%2F11fj6jsc60?entry=ttu" target="_blank" rel="noopener" aria-label="Abrir localização da KAJE no mapa" title="Abrir localização da KAJE no mapa">
+              📍 Abrir localização no mapa
+            </a>
+            <div class="cta-actions-note">Rua Atalanta, 75 • Timbó/SC • presencial com agendamento</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-shell">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 12px; width:228px; flex:0 0 228px; overflow:hidden;">
+            <img class="brand-logo-image" src="<?php echo kaje_asset( 'assets/logo-kaje-header-horizontal.png' ); ?>" alt="Logo da KAJE Administração e Serviços" style="width:304px; max-width:none; box-shadow:none;">
+          </div>
+          <div>Atendimento para Empresas de Timbó/SC e de todo o Brasil.</div>
+          <div style="margin-top:12px;"><strong class="footer-title">CNPJ</strong><br>60.405.684/0001-33</div>
+        </div>
+        <div>
+          <strong class="footer-title">Atuação</strong>
+          <div style="margin-top:10px;">Base em Timbó/SC com atendimento online para todo o Brasil e presencial mediante agendamento.</div>
+          <div style="margin-top:12px;"><strong class="footer-title">Endereço</strong><br>Rua Atalanta, 75 • Timbó/SC</div>
+        </div>
+        <div>
+          <strong class="footer-title">Contato</strong>
+          <div style="margin-top:10px;">WhatsApp (47) 98809-0296 • kerly@zictec.com.br</div>
+          <div style="margin-top:12px;"><strong class="footer-title">Modelo</strong><br>Online para todo o Brasil • presencial com agendamento</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<?php wp_footer(); ?>
+</body>
+</html>

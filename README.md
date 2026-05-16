@@ -33,3 +33,34 @@ python3 -m http.server 8093 --directory .
 - WhatsApp, email e Instagram oficiais
 - provas sociais / fotos / portfólio
 - revisão de copy comercial
+
+
+## Uso como tema WordPress
+
+Este repositório também é um tema WordPress simples para o site institucional `www.kajeservicos.com.br`.
+
+Arquivos relevantes:
+- `style.css` — cabeçalho obrigatório para o WordPress reconhecer o tema.
+- `front-page.php` — versão WordPress da landing page, com assets resolvidos via `get_template_directory_uri()`.
+- `index.php` — fallback do tema.
+- `functions.php` — bootstrap mínimo do tema.
+
+Deploy no servidor WordPress:
+
+```bash
+cd /var/www/kaje/wp-content/themes
+git clone https://github.com/jarvis-zictec/kaje-servicos-site.git kaje-site
+chown -R nginx:nginx /var/www/kaje/wp-content/themes/kaje-site
+```
+
+Atualização posterior:
+
+```bash
+cd /var/www/kaje/wp-content/themes/kaje-site
+git pull --ff-only
+chown -R nginx:nginx /var/www/kaje/wp-content/themes/kaje-site
+```
+
+No painel Multisite:
+1. Administração da rede > Temas > habilitar “KAJE Serviços”.
+2. No site `www.kajeservicos.com.br`, ativar o tema “KAJE Serviços”.
