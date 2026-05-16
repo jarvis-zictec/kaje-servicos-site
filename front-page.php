@@ -1054,7 +1054,7 @@ Fale com a KAJE pelo WhatsApp, envie sua demanda por email, agende uma conversa 
         <div>
           <strong class="footer-title">Contato</strong>
           <div style="margin-top:10px;">WhatsApp (47) 98809-0296 • kerly@kajeservicos.com.br</div>
-          <div style="margin-top:10px;"><a href="https://loja.kajeservicos.com.br/">Loja online</a> • <a href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">Agendamento online</a> • <a href="/termos-de-uso/">Termos de uso</a></div>
+          <div style="margin-top:10px;"><a href="https://loja.kajeservicos.com.br/">Loja online</a> • <a href="https://www.calendly.com/kerly-kajeservicos" target="_blank" rel="noopener">Agendamento online</a> • <a href="/termos-de-uso/">Termos de uso</a> • <a href="/politica-de-privacidade/">Política de privacidade</a></div>
           <div style="margin-top:12px;"><strong class="footer-title">Modelo</strong><br>Online para todo o Brasil • presencial com agendamento</div>
         </div>
       </div>
